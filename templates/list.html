@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Jobs list
+{% endblock %}
+
+{% block body %}
+<h1>List</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Discription</th>
+      <th scope="col">Date of end</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+  {%for elem in list%}
+    <tr>
+      <td>{{elem.title}}</td>
+      <td>{{elem.disc}}</td>
+      <td>{{elem.endTime}}</td>
+        <td>
+            <a href="/post/{{elem.id}}" type="button" class="btn btn-success">View</a>
+            <a href="/remove/{{elem.id}}" type="button" class="btn btn-primary">Apply</a>
+        </td>
+    </tr>
+  {%endfor%}
+
+  </tbody>
+</table>
+
+
+<a href="/create" class="btn btn-primary addB" >Add new</a>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{post.title}}
+{% endblock %}
+
+{% block body %}
+
+
+<div class="card">
+  <div class="card-header">
+    Task
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{post.title}}</h5>
+    <p class="card-text">{{post.disc}}</p>
+    <a href="/remove/{{elem.id}}" class="btn btn-primary">Apply</a>
+  </div>
+</div>
+
+
+{% endblock %}
