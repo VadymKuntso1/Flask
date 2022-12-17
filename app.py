@@ -68,6 +68,9 @@ def list():
 
     return render_template('list.html',list = list)
 
+@app.route('/itstep')
+def itstep():
+    pass
 
 if __name__ == '__main__':
     app.run(debug=True)
